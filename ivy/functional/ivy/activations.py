@@ -11,6 +11,7 @@ from ivy.func_wrapper import (
     to_native_arrays_and_back,
     handle_nestable,
     integer_arrays_to_float,
+    handle_array_like,
 )
 from ivy.exceptions import handle_exceptions
 
@@ -23,6 +24,7 @@ from ivy.exceptions import handle_exceptions
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def relu(
     x: Union[ivy.Array, ivy.NativeArray],
     /,
@@ -84,6 +86,7 @@ def relu(
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def leaky_relu(
     x: Union[ivy.Array, ivy.NativeArray],
     /,
@@ -146,6 +149,7 @@ def leaky_relu(
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def gelu(
     x: Union[ivy.Array, ivy.NativeArray],
     /,
@@ -204,6 +208,7 @@ def gelu(
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def sigmoid(
     x: Union[ivy.Array, ivy.NativeArray], /, *, out: Optional[ivy.Array] = None
 ) -> ivy.Array:
@@ -257,6 +262,7 @@ def sigmoid(
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def softmax(
     x: Union[ivy.Array, ivy.NativeArray],
     /,
@@ -323,6 +329,7 @@ def softmax(
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def softplus(
     x: Union[ivy.Array, ivy.NativeArray],
     /,
@@ -396,6 +403,7 @@ def softplus(
 @handle_out_argument
 @handle_nestable
 @handle_exceptions
+@handle_array_like
 def log_softmax(
     x: Union[ivy.Array, ivy.NativeArray],
     /,
